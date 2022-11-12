@@ -1,0 +1,22 @@
+//File Handling
+#include<iostream>     
+#include<fstream>      
+using namespace std;
+main ()
+{
+int roll,marks;
+char name [20];
+ofstream out("file.txt");    
+cout<<"Enter roll no: ";
+cin>>roll;
+cout<<"Enter name: ";
+cin>>name;
+cout<<"Enter marks: ";             
+cin>>marks;
+out<<roll<<" "<<name<<" "<<marks;  
+out.close();                     
+ifstream in("Luci.txt");        
+in>>roll>>name>>marks;
+cout<<"Roll no: "<<roll<<endl<<"Name: "<<name<<endl<<"Marks: "<<marks; // output on screen
+in.close();
+}
